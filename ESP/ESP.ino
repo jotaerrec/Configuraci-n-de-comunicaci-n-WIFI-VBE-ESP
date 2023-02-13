@@ -1,4 +1,4 @@
-#include <WiFi.h>
+#include <ESP8266WiFi.h>
 
 //IPAddress ip(192, 168, 43, 150);
 //IPAddress gateway(192, 168, 43, 1);
@@ -6,14 +6,14 @@
 //IPAddress dns(192, 168, 43, 1);
 
 int led1 = 2;
-char* ssid     = "TeleCentro-9d10";
-char* password = "KZM4EWYJRTM5";
+const char* ssid     = "TeleCentro-9d10";
+const char* password = "KZM4EWYJRTM5";
 
 WiFiServer server(80);
 
 void setup()
 {
-  Serial.begin(115200);
+  Serial.begin(9600);
   delay(10);
 
   pinMode(led1, OUTPUT);

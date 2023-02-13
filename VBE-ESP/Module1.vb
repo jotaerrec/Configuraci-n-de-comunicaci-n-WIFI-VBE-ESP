@@ -40,12 +40,12 @@ Module Module1
 
         While Not rta = "FIN"
 
-            If rawdata Then
+            If Not rawdata = "" Then
                 Console.WriteLine("El valor de led1 es: " + rawdata)
             End If
             Console.WriteLine("Indique el estado del led(HIGH/LOW) en caso de finalizar, escriba fin")
             rta = Console.ReadLine()
-            rta = rta.ToLower()
+            rta = rta.ToUpper()
             SendToServer("led1:" + rta)
 
         End While
